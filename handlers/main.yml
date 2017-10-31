@@ -1,0 +1,7 @@
+# roles/drupal/handlers/main.yml
+---
+
+- name: restart drupal
+  service:
+    name: "{{ drupal_service }}"
+    state: restarted
