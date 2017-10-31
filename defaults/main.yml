@@ -5,5 +5,5 @@ drupal_database: 'drupal'
 drupal_username: 'drupal'
 drupal_password: 'drupal'
 drupal_database_host: 'localhost'
-drupal_prefix: 'drupal_'
+drupal_prefix: ''
 

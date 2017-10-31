@@ -17,7 +17,7 @@ No specific requirements
 | `drupal_username`      | 'drupal'    | Database user for Drupal                    |
 | `drupal_password`      | 'drupal'    | Password for the database user.             |
 | `drupal_database_host` | 'localhost' | Database server                             |
-| `drupal_prefix`        | 'drupal_'   | Prefix value for table names                |
+| `drupal_prefix`        | ''          | Prefix value for table names                |
 
 ## Dependencies
 
