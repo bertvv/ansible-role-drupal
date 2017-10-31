@@ -244,7 +244,7 @@
  *   );
  * @endcode
  */
-$databases = array(
+$databases['default']['default'] = array(
    'driver' => 'mysql',
    'database' => '{{ drupal_database }}',
    'username' => '{{ drupal_username }}',
@@ -253,7 +253,7 @@ $databases = array(
    'port' => 3306,
    'prefix' => '{{ drupal_prefix }}',
    'collation' => 'utf8_general_ci',
- ),
+ );
 
 /**
  * Access control for update.php script.
@@ -637,3 +637,5 @@ $conf['404_fast_html'] = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
  * @see drupal_clean_css_identifier()
  */
 # $conf['allow_css_double_underscores'] = TRUE;
+
+# vim: ft=php
