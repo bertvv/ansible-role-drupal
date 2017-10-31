@@ -33,3 +33,10 @@
     dest: /etc/drupal7/default/settings.php
   tags: drupal
 
+- name: Allow Apache to access database over the network if necessary
+  seboolean:
+    name: httpd_can_network_connect_db
+    state: on
+    persistent: yes
+  when: ansible_selinux.status == 'enabled' and drupal_database_host != 'localhost'
+  tags: drupal
