@@ -11,9 +11,13 @@ No specific requirements
 ## Role Variables
 
 
-| Variable   | Default | Comments (type)  |
-| :---       | :---    | :---             |
-| `role_var` | -       | (scalar) PURPOSE |
+| Variable               | Default     | Comments (type)                             |
+| :---                   | :---        | :---                                        |
+| `drupal_database`      | 'drupal'    | Name of the database Drupal can make use of |
+| `drupal_username`      | 'drupal'    | Database user for Drupal                    |
+| `drupal_password`      | 'drupal'    | Password for the database user.             |
+| `drupal_database_host` | 'localhost' | Database server                             |
+| `drupal_prefix`        | 'drupal_'   | Prefix value for table names                |
 
 ## Dependencies
 
