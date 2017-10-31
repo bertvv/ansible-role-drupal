@@ -1,5 +1,18 @@
 ---
 - hosts: all
   become: true
+  vars:
+    mariadb_databases:
+      - name: drupal_db
+    mariadb_users:
+      - name: drupal_usr
+        password: KorAtJegHi
+        priv: drupal_db.*:ALL
+
+    drupal_username: drupal_usr
+    drupal_password: KorAtJegHi
+    drupal_database: drupal_db
   roles:
+    - bertvv.httpd
+    - bertvv.mariadb
     - drupal
