@@ -7,6 +7,12 @@
     - "{{ ansible_os_family }}.yml"
   tags: drupal
 
+- name: Install package repository
+  package:
+    name: "{{ drupal_repository }}"
+    state: installed
+  tags: drupal
+
 - name: Install packages
   package:
     name: "{{ item }}"
@@ -14,9 +20,16 @@
   with_items: "{{ drupal_packages }}"
   tags: drupal
 
-- name: Ensure service is started
-  service:
-    name: "{{ drupal_service }}"
-    state: started
-    enabled: true
+- name: Install Apache configuration
+  template:
+    src: drupal7.conf.j2
+    dest: /etc/httpd/conf.d/drupal7.conf
+  notify: restart httpd
   tags: drupal
+
+- name: Install Drupal configuration
+  template:
+    src: settings.php.j2
+    dest: /etc/drupal7/default/settings.php
+  tags: drupal
+

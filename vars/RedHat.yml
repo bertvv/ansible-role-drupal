@@ -3,7 +3,9 @@
 # Distribution-specific variables for RHEL, CentOS, ...
 ---
 
-drupal_packages:
-  - drupal
+drupal_repository:
+  - epel-release
 
-drupal_service: drupald
+drupal_packages:
+  - drupal7
+

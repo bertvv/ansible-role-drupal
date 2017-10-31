@@ -1,0 +1,19 @@
+#
+# Drupal is an open-source content-management platform.
+#
+
+Alias /drupal7 /usr/share/drupal7
+
+<Directory /usr/share/drupal7/>
+  <IfModule mod_authz_core.c>
+    # Apache 2.4
+    Require all granted
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    # Apache 2.2
+    Allow from all
+  </IfModule>
+  #Uncomment the next line if using with SSL/TLS
+  #php_flag session.cookie_secure on
+  AllowOverride All
+</Directory>
