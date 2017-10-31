@@ -2,6 +2,8 @@
 
 An Ansible role for installing Drupal on RHEL/CentOS 7. Remark that Drupal is installed from the package repository (EPEL), not from the Drupal project itself.
 
+After applying this role, point your browser to http://SERVER_IP/drupal7/install.php and follow the instructions for configuring your site.
+
 ## Requirements
 
 No specific requirements
