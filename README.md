@@ -1,8 +1,10 @@
 # Ansible role `drupal`
 
-An Ansible role for installing Drupal on RHEL/CentOS 7. Remark that Drupal is installed from the package repository (EPEL), not from the Drupal project itself.
+An Ansible role for installing Drupal on RHEL/CentOS 7.
 
 After applying this role, point your browser to http://SERVER_IP/drupal7/install.php and follow the instructions for configuring your site.
+
+Remark that Drupal is installed from the package repository (EPEL), not from the Drupal project itself. If you need a role that gives you full control over Drupal, PHP versions, drush, etc., take a look at Jeff Geerling's role ([geerlingguy.drupal](https://galaxy.ansible.com/geerlingguy/drupal/)).
 
 ## Requirements
 
@@ -29,7 +31,7 @@ See the test playbooks in either the [Vagrant](https://github.com/bertvv/ansible
 
 ## Testing
 
-There are two types of test environments available. One powered by Vagrant, another by Docker. The latter is suitable for running automated tests on Travis-CI. Test code is kept in separate orphan branches. For details of how to set up these test environments on your own machine, see the README files in the respective branches:
+There are two types of test environments available. One powered by Vagrant, another by Docker (TODO). The latter is suitable for running automated tests on Travis-CI. Test code is kept in separate orphan branches. For details of how to set up these test environments on your own machine, see the README files in the respective branches:
 
 - Vagrant: [vagrant-tests](https://github.com/bertvv/ansible-role-drupal/tree/vagrant-tests)
 - Docker: [docker-tests](https://github.com/bertvv/ansible-role-drupal/tree/docker-tests)
