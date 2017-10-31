@@ -7,5 +7,6 @@ drupal_repository:
   - epel-release
 
 drupal_packages:
+  - php-mysql
   - drupal7
 
