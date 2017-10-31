@@ -1,8 +1,6 @@
 # Ansible role `drupal`
 
-An Ansible role for PURPOSE. Specifically, the responsibilities of this role are to:
-
--
+An Ansible role for installing Drupal on RHEL/CentOS 7. Remark that Drupal is installed from the package repository (EPEL), not from the Drupal project itself.
 
 ## Requirements
 
@@ -21,7 +19,7 @@ No specific requirements
 
 ## Dependencies
 
-No dependencies.
+- [bertvv.httpd](https://galaxy.ansible.com/bertvv/httpd/)
 
 ## Example Playbook
 
